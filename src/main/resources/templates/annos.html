@@ -1,0 +1,25 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Resepti</title>
+        <meta charset="utf-8" />
+    </head>
+
+    <body>
+        <h1 th:text="${annos.nimi}">Annos</h1>
+
+         <ul>
+            <li th:each="annos : ${annokset}">
+                    <span th:text="${raakaAine.nimi}">raakaAine</span> <span th:text="${annosRaakaAine.jarjestys}">1</span> <span th:text="${annosRaakaAine.maara}">Maara</span> <span th:text="${annosRaakaAine.ohje}">Ohje</span>
+            </li>
+        </ul>
+        
+        <ul>
+            <li> 
+                <a href="/annokset">Reseptilistaukseen</a> 
+            </li>
+        </ul>
+        
+    </body>
+</html>

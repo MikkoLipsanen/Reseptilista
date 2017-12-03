@@ -1,0 +1,30 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Reseptilista</title>
+        <meta charset="utf-8" />
+    </head>
+
+    <body>
+        <h1>Reseptilista</h1>
+
+        <ul>
+            <li th:each="annos : ${annokset}">
+                <a th:href="@{~/annokset/{id}(id=${annos.id})}">
+                    <span th:text="${annos.nimi}">Annos</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li> 
+                <a href="/resepti">Luo uusi annos</a> 
+            </li>
+            <li> 
+                <a href="/ainekset">Tarkastele ja lis&auml;&auml; aineksia</a> 
+            </li>
+        </ul>
+
+    </body>
+</html>
